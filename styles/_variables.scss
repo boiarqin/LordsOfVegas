@@ -1,0 +1,39 @@
+$red: #C61800;
+$yellow: #FFCF00;
+$green: #31B639;
+$blue: #1851CE;
+
+$aqua: #30B3AC;
+$purple: #B3307E;
+$brown: #803703;
+$silver: #827C7D;
+$gold: #FAC920;
+
+$aqua-secondary: #50D3CC;
+$purple-secondary: #D3509E;
+$brown-secondary: #A05723;
+$silver-secondary: #A29C9D;
+$gold-secondary: #FFE940;
+
+$boardWidth: 514px;
+$tileWidth: $boardWidth/7;
+$stripWidth: $boardWidth/7;
+$alleyWidth: $tileWidth/4;
+
+$serifFont: Georgia, serif;
+$sansSerifFont: Futura, "Century Gothic", sans-serif;
+
+$trackWidth: $boardWidth;
+$trackHeight: 30px;
+$numTrackBreaks: 29;
+$markerWidth: 15px;
+
+@mixin linear-gradient($primary-color, $secondary-color){
+	background: repeating-linear-gradient(
+	  	45deg,
+	  	$primary-color,
+	  	$primary-color 10px,
+	  	$secondary-color 10px,
+	  	$secondary-color 20px
+	);
+}

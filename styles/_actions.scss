@@ -1,0 +1,32 @@
+.player-actions {
+	padding: 20px 0 0;
+	border-top: 1px solid #FFF;
+	color: #FFF;
+	font-size: 20px;
+	font-family: $sansSerifFont;
+	text-align: left;
+	table {
+		width: 100%;
+	}
+	th {
+		padding: 5px;
+		font-size: 18px;
+		text-transform: uppercase;
+		text-align: left;
+	}
+	.description, .cost {
+		padding: 5px;
+		font-size: 10px;
+	}
+	button{
+		font-size: 14px;
+		background: transparent;
+		border: 2px solid white;
+		border-radius: 5px;
+		text-transform: uppercase;
+		white-space: nowrap;
+		&[disabled]{
+			background: rgba(255,255,255,.7);
+		}
+	}
+}

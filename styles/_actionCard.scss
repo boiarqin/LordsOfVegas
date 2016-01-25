@@ -1,0 +1,136 @@
+.card.action{
+	&.confirm{
+		
+		.card-content {
+		}
+		.color-selection, .insufficient-funds {
+			display: block;
+		    width: 90%;
+		    border-top: 1px solid black;
+		    margin: 0 auto 10px;
+		    font-size: 18px;
+			font-family: $sansSerifFont;
+			text-transform: uppercase;
+		}
+		.insufficient-funds {
+			color: $red;
+		}
+		.confirm-button, .cancel-button{
+			display: inline-block;
+			width: 60%;
+			margin: 0 auto 10px;
+			border: 2px solid #FFF;
+			border-radius: 5px;
+			font-size: 18px;
+			font-family: $sansSerifFont;
+			color: #FFF;
+			background: #000;
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+	}
+	.card-content{
+		width: 200px;
+		min-height: 100px;
+	}
+	.card-title{
+		width: 90%;
+		text-transform: uppercase;
+	}
+	.color-selection {
+		display: none;
+	}
+	.confirm-button, .cancel-button{
+		display: none;
+	}
+	&.build{
+		.card-background {
+			background-image: url(../images/actions/build.jpg);
+		}
+		.color-overlay{
+			background: rgba(0, 0, 0, .2);
+		}
+	}
+	&.sprawl{
+		.card-background {
+			background-image: url(../images/actions/sprawl.jpg);
+		}
+		.color-overlay{
+			background: rgba(0, 0, 0, .2);
+		}
+	}
+	&.reorganize{
+		.card-background {
+			background-image: url(../images/actions/reorganize.jpg);
+		}
+		.color-overlay{
+			background: rgba(0, 0, 0, .2);
+		}
+	}
+	&.remodel{
+		.card-background {
+			background-image: url(../images/actions/remodel.jpg);
+		}
+		.color-overlay{
+			background: rgba(0, 0, 0, .2);
+		}
+	}
+	&.gamble{
+		.card-background {
+			background-image: url(../images/actions/gamble.jpg);
+		}
+		.color-overlay{
+			background: rgba(0, 0, 0, .2);
+		}
+	}
+	.gamble-numbers {
+		color: $yellow;
+		font-size: 24px;
+		font-family: $serifFont;
+		.single, .double{
+			display: block;
+		    position: absolute;
+		    left: 130px;
+		    top: 0px;
+		    height: 280px;
+		    width: 20px;
+		    text-align: center;
+			transform-origin: bottom center;
+		}
+		.double:before, .double::before {
+			content: ' ';
+			display: block;
+			position: absolute;
+			top: 2px;
+			left: -3px;
+			height: 26px;
+			width: 26px;
+			border: 2px solid $yellow;
+			border-radius: 100%;
+		}
+		.char1 { transform: rotate(-25deg); }
+		.char2 { transform: rotate(-17deg); }
+		.char3 { transform: rotate(-9deg); }
+		.char4 { transform: rotate(-1deg); }
+		.char5 { transform: rotate(7deg); }
+		.char6 { transform: rotate(17deg); }
+		.char7 { transform: rotate(25deg); }
+
+	}
+	.gamble-wager, .gamble-amount {
+		display: block;
+		width: 100%;
+		font-size: 14px;
+		font-family: $sansSerifFont;
+		text-transform: uppercase;
+		text-align: left;
+	}
+	.gamble-wager input[type=range]{
+		width: 100px;
+	}
+	.gamble-amount{
+		border: 3px solid #000;
+		width: 50px;
+	}
+}
+

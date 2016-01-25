@@ -1,0 +1,179 @@
+.gameBoard {
+	width: $boardWidth;
+	//height: $boardWidth + 2*$alleyWidth;
+	.rightChildren, .theStrip, .leftChildren {
+		float: left;
+		width: 3*$tileWidth;
+		height: 100%;
+	}
+	.theStrip{
+		position: relative;
+		width: $stripWidth;
+		color: #FFF;
+		font-size: 36px;
+		font-family: $sansSerifFont;
+		.label1, .label2 {
+			display: block;
+			position: relative;
+			width: $boardWidth/2;
+			text-align: center;
+		}
+		.label1{
+			top: ($boardWidth + 2*$alleyWidth)/2;
+		    left: 10px;
+		    transform: rotate(270deg);
+		    transform-origin: 0 0 0;
+		}
+		.label2{
+			top: ($boardWidth + 2*$alleyWidth)/2;
+		    left: ($stripWidth - 10);
+			transform: rotate(90deg);
+		    transform-origin: 0 0 0;
+		}
+		
+	}
+	.gameBoardRegion{
+		width: 100%;
+		margin-bottom: $alleyWidth;
+	}
+
+}
+.gameBoardTile{
+	float: left;
+	position: relative;
+	height: $tileWidth;
+	width: $tileWidth;
+	border: 1px solid #FFF;
+	cursor: pointer;
+	
+	.lotId {
+		display: block;
+		position: absolute;
+		top: 2px;
+		left: $tileWidth/3;
+		height:  $tileWidth/3;
+		width: $tileWidth/3;
+
+		font-size: $tileWidth/5;
+		color: #FFF;
+		font-family: $sansSerifFont;
+		text-align: center;
+	}
+	.dieValue {
+		position: absolute;
+		top: $tileWidth/3;
+		left: $tileWidth/3;
+		height: $tileWidth/3;
+		width: $tileWidth/3;
+		@include coloredDice(#FFF);
+	}
+	.buildCost {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		height: $tileWidth/3;
+		width: $tileWidth/3;
+		border-radius: 0 100% 0 0;
+	    border-top: 3px solid #FFF;
+	    border-right: 1px solid #FFF;
+		
+		font-size: $tileWidth/7;
+		color: #FFF;
+		font-family: $serifFont;
+		line-height: $tileWidth/3;
+	}
+	&.aqua{
+		/* background: $aqua; */
+		@include linear-gradient($aqua, $aqua-secondary);
+	}
+	&.brown{
+		/* background: $brown; */
+		@include linear-gradient($brown, $brown-secondary);
+	}
+	&.gold{
+		/* background: $gold; */
+		@include linear-gradient($gold, $gold-secondary);
+	}
+	&.purple{
+		/* background: $purple; */
+		@include linear-gradient($purple, $purple-secondary);
+	}
+	&.silver{
+		/* background: $silver; */
+		@include linear-gradient($silver, $silver-secondary);
+	}
+}
+.gameBoardTile.owned {
+	
+	&.red {
+		.lotId {
+			color: $red;
+		}
+		.dieValue {
+			@include coloredDice($red);
+		}
+		.buildCost {
+			border-color: $red;
+			color: $red;
+		}
+	}
+	&.yellow {
+		.lotId {
+			color: $yellow;
+		}
+		.dieValue {
+			@include coloredDice($yellow);
+		}
+		.buildCost {
+			border-color: $yellow;
+			color: $yellow;
+		}
+	}
+	&.green {
+		.lotId {
+			color: $green;
+		}
+		.dieValue {
+			@include coloredDice($green);
+		}
+		.buildCost {
+			border-color: $green;
+			color: $green;
+		}
+	}
+	&.blue {
+		.lotId {
+			color: $blue;
+		}
+		.dieValue {
+			@include coloredDice($blue);
+		}
+		.buildCost {
+			border-color: $blue;
+			color: $blue;
+		}
+	}
+}
+.gameBoardTile.built {
+	&.red {
+		.dieValue{
+			background: $red;
+		}
+	}
+	&.yellow {
+		.dieValue{
+			background: $yellow;
+		}
+	}
+	&.green {
+		.dieValue{
+			background: $green;
+		}
+	}
+	&.blue {
+		.dieValue{
+			background: $blue;
+		}
+	}
+}
+

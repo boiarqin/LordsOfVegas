@@ -1,0 +1,72 @@
+.scoringTrack {
+	position: relative;
+	margin: 10px 0 0 0;
+	padding: 0;
+	height: $trackHeight;
+	min-width: $trackWidth;
+	list-style-type: none;
+	.scoringTrackBreak {
+		display: inline-block;
+		position: relative;
+		bottom: 0px;
+		height: $trackWidth/$numTrackBreaks;
+		width: $trackWidth/$numTrackBreaks;
+		border-top: 2px solid #FFF;
+		background: transparent;
+		color: #FFF;
+		font-size: 10px;
+		font-family: $serifFont;
+		text-align: center;
+		&:before, &::before {
+			content: '·';
+		    display: block;
+		    height: 10px;
+		    width: 10px;
+		    position: absolute;
+		    top: -10px;
+		    left: 4px;
+		    font-size: 20px;
+		    line-height: 15px;
+		}
+	}
+}
+.scoringTrackMarker {
+	display: block;
+	position: absolute;
+	bottom: 25px;
+	height: $markerWidth;
+	width: $markerWidth;
+	border-radius: 5px;
+	&.red {
+		background: $red;
+		.arrow{
+			border-top-color: $red;
+		}
+	}
+	&.yellow {
+		background: $yellow;
+		.arrow{
+			border-top-color: $yellow;
+		}
+	}
+	&.green {
+		background: $green;
+		.arrow{
+			border-top-color: $green;
+		}
+	}
+	&.blue {
+		background: $blue;
+		.arrow{
+			border-top-color: $blue;
+		}
+	}
+	.arrow {
+		position: absolute;
+		width: 0;
+	    height: 0;
+		left: $markerWidth/5;
+	    bottom: (-$markerWidth/2);
+		border: 5px solid transparent;
+	}
+}

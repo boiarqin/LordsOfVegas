@@ -1,0 +1,81 @@
+var data = {
+	"defaults": {
+		"players" : {
+			"colors": ["red", "yellow", "green", "blue"],
+			"numDice": 12,
+			"numMarkers": 10,
+		},
+		
+		"casinos" : {
+			"colors": ["aqua", "brown", "gold", "purple", "silver"],
+			"numTiles": 9
+		},
+		"board" : {
+			"scoringTrack" : [0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 32, 36, 40, 44, 49, 54, 60, 66, 73, 81, 90],
+			"lots" : [{
+					"id" : "A1",
+					"buildCost" : 0,
+					"dieValue" : 1,
+					"onStrip" : false
+				}],
+			"lotAdjacencyMatrix" : []
+		},
+		"cards" : {
+			"numStripCards" : 3,
+			"endOfGameMark" : 0.75,
+			"startingAmounts" : [4, 5, 6, 7, 8, 9],
+			"startingAmountDistribution" : [0.0625, 0.1875, 0.25, 0.25, 0.1875, 0.0625]
+		},
+		"avatars" : [
+			{
+				"name" : "Liberace",
+				"image" : ""
+			},
+			{
+				"name" : "Frank Sinatra",
+				"image" : ""
+			},
+			{
+				"name" : "Celine Dion",
+				"image" : ""
+			},
+			{
+				"name" : "Elvis Presley",
+				"image" : ""
+			},
+			{
+				"name" : "Siegfried & Roy",
+				"image" : ""
+			},
+			{
+				"name" : "Penn & Teller",
+				"image" : ""
+			},
+			{
+				"name" : "Dean Martin",
+				"image" : ""
+			},
+			{
+				"name" : "Sammy Davis Jr",
+				"image" : ""
+			},
+			{
+				"name" : "Prince",
+				"image" : ""
+			},
+			{
+				"name" : "Lola Falana",
+				"image" : ""
+			},
+			{
+				"name" : "Cher",
+				"image" : ""
+			},
+			{
+				"name" : "Donny & Marie",
+				"image" : ""
+			}
+		],
+	}
+
+}

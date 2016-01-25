@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+body {
+	height: 100%;
+	width: 100%;
+	background-image: url(../images/background/lasvegas.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.background-overlay {
+	height: 100%;
+	width: 100%;
+}
+#container {
+	width: 1500px;
+	padding: 50px;
+	background-clip: content-box;
+}
+.app-board {
+	float: left;
+	width: $boardWidth + 40px;
+	margin-right: 20px;
+	padding: 20px;
+	background: rgba(0, 0, 0, .7);
+}
+.app-actions {
+	margin-right: 20px;
+}
+.app-actions, .app-stats {
+	float: left;
+	width: 350px;
+	height: 100%;
+	padding: 20px;
+	background: rgba(0, 0, 0, .7);
+}

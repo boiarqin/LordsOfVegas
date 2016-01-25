@@ -1,0 +1,201 @@
+.app-stats{
+	h2 {
+		margin: 0;
+		padding: 0 0 10px;
+		color: #FFF;
+		font-size: 18px;
+		font-family: $sansSerifFont;
+	}
+}
+.players {
+	padding: 0 0 20px;
+	border-bottom: 1px solid #FFF;
+	
+	.player-marker {
+		display: block;
+		float: left;
+		position: relative;
+		height: 65px;
+		width: 65px;
+		margin: 5px;
+		border-radius: 100%;
+		border: 3px solid #FFF;
+		color: #FFF;
+
+		&.red {
+			border-color: $red;
+			&.active{
+				background: $red;
+			}
+		}
+		&.yellow {
+			border-color: $yellow;
+			&.active{
+				background: $yellow;
+			}
+		}
+		&.green {
+			border-color: $green;
+			&.active{
+				background: $green;
+			}
+		}
+		&.blue {
+			border-color: $blue;
+			&.active{
+				background: $blue;
+			}
+		}
+	}
+	.amount {
+		display: block;
+    	position: absolute;
+    	top: 10px;
+    	height: 30px;
+    	width: 60px;
+		color: #FFF;
+		font-size: 24px;
+		font-family: $serifFont;
+		text-align: center;
+	}
+	.million{
+		display: block;
+		position: absolute;
+    	top: 37px;
+    	height: 15px;
+    	width: 60px;
+    	color: #FFF;
+		font-size: 10px;
+		font-family: $serifFont;
+		font-style: italic;
+		text-align: center;
+	}
+}
+.tiles {
+	padding: 20px 0;
+	border-bottom: 1px solid #FFF;
+	
+	.tile-marker {
+		display: block;
+		float: left;
+		position: relative;
+		height: 50px;
+		width: 50px;
+		margin: 5px;
+		border-radius: 5px;
+		border: 3px solid #FFF;
+		color: #FFF;
+		font-size: 24px;
+		line-height: 28px;
+		font-family: $sansSerifFont;
+		text-align: center;
+
+		&.aqua{
+			border-color: $aqua;
+			.remaining {
+				border-color: $aqua;
+			}
+			@include linear-gradient($aqua, $aqua-secondary);
+		}
+		&.brown{
+			border-color: $brown;
+			.remaining {
+				border-color: $brown;
+			}
+			@include linear-gradient($brown, $brown-secondary);
+		}
+		&.gold{
+			border-color: $gold;
+			.remaining {
+				border-color: $gold;
+			}
+			@include linear-gradient($gold, $gold-secondary);
+		}
+		&.purple{
+			border-color: $purple;
+			.remaining {
+				border-color: $purple;
+			}
+			@include linear-gradient($purple, $purple-secondary);
+		}
+		&.silver{
+			border-color: $silver;
+			.remaining {
+				border-color: $silver;
+			}
+			@include linear-gradient($silver, $silver-secondary);
+		}
+	}
+	.remaining {
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		height: 30px;
+		width: 30px;
+		border-radius: 3px;
+		border: 3px solid #FFF;
+		background: #000;
+
+	}
+}
+.properties {
+	padding: 20px 0 0;
+	color: #FFF;
+	font-size: 20px;
+	font-family: $sansSerifFont;
+	text-align: left;
+	table {
+		width: 100%;
+	}
+	th {
+		padding: 5px;
+		font-size: 18px;
+		text-transform: uppercase;
+		text-align: left;
+	}
+	td {
+		padding: 5px;
+		font-size: 16px;
+	}
+	.lot-marker {
+		display: block;
+		height: 25px;
+		width: 25px;
+		border-radius: 5px;
+		border: 2px solid #FFF;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+	}
+	.tile-marker {
+		display: block;
+		float: left;
+		position: relative;
+		height: 25px;
+		width: 25px;
+		margin: 2px;
+		border-radius: 5px;
+		border: 2px solid #FFF;
+		color: #FFF;
+		font-size: 16px;
+		line-height: 20px;
+		font-family: $sansSerifFont;
+		text-align: center;
+
+		&.aqua{
+			border-color: $aqua;
+		}
+		&.brown{
+			border-color: $brown;
+		}
+		&.gold{
+			border-color: $gold;
+		}
+		&.purple{
+			border-color: $purple;
+		}
+		&.silver{
+			border-color: $silver;
+		}
+	}
+}

@@ -1,0 +1,66 @@
+@mixin coloredDice($pipColor){
+
+	//$pipColor: #FFF;
+	$dieBackground: transparent;
+	$pipDistance: 1em;
+	$pipDistance2: 1.2em;
+	$pipDistance3: 0.9em;
+	$pipDistance4: 0.8em;
+
+	display: inline-block;
+	position: relative;
+	padding: 7px;
+	border: 1px solid $pipColor;
+	border-radius: 5px;
+	font-size: 6px;
+	background: $dieBackground;
+	background-image: linear-gradient(top, #fefefe, #f1f1f1 80%);
+	
+
+	&.dieValue-1 .dot { 
+		//box-shadow: 0 .2em 0 #FFF 
+	}
+	&.dieValue-2 .dot { 
+		background: transparent;
+		box-shadow: (-$pipDistance) (-$pipDistance) 0 $pipColor, 
+			     $pipDistance  $pipDistance 0 $pipColor
+	}
+	&.dieValue-3 .dot { 
+		box-shadow: (-$pipDistance) (-$pipDistance) 0 $pipColor, 
+			     $pipDistance  $pipDistance 0 $pipColor
+	}
+	&.dieValue-4 .dot { 
+		background: transparent;
+	        box-shadow: (-$pipDistance) (-$pipDistance) 0 $pipColor, 
+	        	     $pipDistance  $pipDistance 0 $pipColor, 
+	        	    (-$pipDistance)  $pipDistance 0 $pipColor, 
+	        	     $pipDistance (-$pipDistance) 0 $pipColor
+	}
+	&.dieValue-5 .dot { 
+		box-shadow: (-$pipDistance) (-$pipDistance) 0 $pipColor, 
+			     $pipDistance  $pipDistance 0 $pipColor, 
+			    (-$pipDistance)  $pipDistance 0 $pipColor, 
+			     $pipDistance (-$pipDistance) 0 $pipColor
+	}
+	&.dieValue-6 .dot {
+		background: transparent;
+		box-shadow: (-$pipDistance) (-$pipDistance) 0 $pipColor,
+			    (-$pipDistance)      0 0 $pipColor,
+			    (-$pipDistance)  $pipDistance 0 $pipColor,
+			     $pipDistance (-$pipDistance) 0 $pipColor,
+			     $pipDistance      0 0 $pipColor,
+			     $pipDistance  $pipDistance 0 $pipColor
+	}
+
+	.dot {
+		width: 20%; 
+		height: 20%; 
+		left: 50%; 
+		top: 50%;
+		margin: -10%;
+		background: $pipColor;
+		border-radius: 100%;
+		display: block;
+		position: absolute;
+	}
+}

@@ -1,0 +1,34 @@
+{
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babelify": "^7.2.0",
+    "classnames": "^2.2.3",
+    "events": "^1.1.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-serve": "^0.1.6",
+    "react-dom": "^0.14.6",
+    "redux": "^3.0.5"
+  },
+  "dependencies": {
+    "browserify": "^11.2.0",
+    "grunt-browserify": "^4.0.1",
+    "reactify": "^1.1.1",
+    "watchify": "^3.4.0"
+  },
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:js": "browserify -t [ reactify --es6 ] js/app.js -o dist/index.js",
+    "build:css": "node-sass --include-path scss styles/main.scss dist/main.css",
+    "build:watchcss": "watch 'npm run build:css' styles",
+    "build:watchjs": "watch 'npm run build:js' js",
+    "start": "parallelshell 'npm run build:watchcss' 'npm run build:watchjs' 'serve -p 3000'"
+  }
+}
