@@ -31,7 +31,7 @@ var validateSelection = function(state, lotId){
 }
 var getCasinoBoss = function(ownedLots, casino){
 	var lots = casino.lots;
-	var lotsData = lots.map(id => lotLookup(id));
+	var lotsData = lots.map(id => {return {lotId: id, ...(ownedLots[id])}});
 	var bossLotData = lotsData.reduce((prev, curr) => {
 		if (curr.dieValue > prev.dieValue){
 			return curr;
@@ -102,7 +102,7 @@ var drawNewCard = function(ownedLots, activePlayer){
 			endOfGame = true;
 		}
 		else{
-			ownedLots = assignLot(ownedLots, activePlayer, lotData.lotId);
+			ownedLots = assignLot(ownedLots, activePlayer, lotData);
 		}
 
 		return {
@@ -128,7 +128,7 @@ var Reducer = function (state, action){
 					var startingCard = CardDeckStore.drawCard(),
 						startingLotData = lotLookup(startingCard.lotId);
 				
-					ownedLots = assignLot(ownedLots, playerColor, startingLotData.lotId);
+					ownedLots = assignLot(ownedLots, playerColor, startingLotData);
 					scores = addMoney(scores, playerColor, startingLotData.startingAmount);
 				}
 			}

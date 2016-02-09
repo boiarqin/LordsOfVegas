@@ -4,7 +4,7 @@ var actionCreators = {
 	},
 	selectAction: function(actionType){
 		if (actionType === "endturn"){
-				return {type: 'END_TURN', actionType};	
+			return {type: 'END_TURN', actionType};	
 		}
 		else {
 			return {type: 'SELECT_ACTION', actionType};	

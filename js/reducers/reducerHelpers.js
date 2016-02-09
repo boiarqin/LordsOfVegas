@@ -19,18 +19,18 @@ var ReducerHelpers = {
 		}
 	},
 
-	assignLot : function(ownedLots, playerColor, lotId, isSquatting){
+	assignLot : function(ownedLots, playerColor, defaultLotData, isSquatting){
 
 		var lotData = {
 			"playerColor" : playerColor,
 			"casinoColor" : "",
-			"dieValue" : 1,
+			"dieValue" : defaultLotData.dieValue,
 			"isBuilt" : false,
 			"isSquatting" : isSquatting ? isSquatting : false
 		}
 		return {
 			...ownedLots,
-			[lotId]: lotData
+			[defaultLotData.lotId]: lotData
 		}
 	}
 

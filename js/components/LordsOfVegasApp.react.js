@@ -109,7 +109,7 @@ var LordsOfVegasApp = React.createClass({
 				<div className="app-stats">
 					<PlayerStats scores={this.props.scores} activePlayer={this.props.activePlayer}/>
 					<TileStats casinosDefaults={this.props.casinosDefaults} casinos={this.props.casinos}/>
-					<PropertyStats />
+					<PropertyStats scores={this.props.scores} ownedLots={this.props.ownedLots} casinos={this.props.casinos}/>
 				</div>
 			</div>
 		);
